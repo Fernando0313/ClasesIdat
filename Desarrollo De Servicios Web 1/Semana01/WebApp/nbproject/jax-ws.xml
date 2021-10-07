@@ -2,7 +2,7 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
     <service name="wservices">
-      <implementation-class>pe.idat.wservices</implementation-class>
+      <implementation-class>WS.wservices</implementation-class>
     </service>
   </services>
   <clients/>

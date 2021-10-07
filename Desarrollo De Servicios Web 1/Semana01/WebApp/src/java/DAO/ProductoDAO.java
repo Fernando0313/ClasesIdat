@@ -43,27 +43,27 @@ public class ProductoDAO implements IProducto{
     
     @Override
     public void insert(VO.ProductoVO vo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        vo.setProductoId(repository.size()+1);
+        repository.put(vo.getProductoId(), vo);
     }
 
     @Override
     public void update(VO.ProductoVO vo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        repository.put(vo.getProductoId(), vo);
     }
 
     @Override
     public void delete(Integer productoId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        repository.remove(productoId);
     }
 
     @Override
-    public void ProductoVO(Integer productoId) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void findById(Integer productoId) {
     }
 
     @Override
     public Collection<VO.ProductoVO> findAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return repository.values();
     }
     
 }

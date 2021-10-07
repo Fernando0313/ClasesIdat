@@ -15,6 +15,6 @@ public interface IProducto {
     public abstract  void insert(ProductoVO vo);
     public abstract  void update(ProductoVO vo);
     public abstract  void delete(Integer productoId);
-    public abstract  void ProductoVO(Integer productoId);
+    public abstract  void findById(Integer productoId);
     public abstract  Collection<ProductoVO> findAll();
 }
